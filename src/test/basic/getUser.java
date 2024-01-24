@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 import model.basic.User;
 
-public class getUser {
+public class GetUser {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
