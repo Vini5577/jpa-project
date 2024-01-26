@@ -6,14 +6,19 @@ import javax.persistence.Persistence;
 
 import model.basic.User;
 
-public class GetUser {
+public class DeleteUser {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
         EntityManager em = emf.createEntityManager();
 
         User user = em.find(User.class, 8L);
-        System.out.println("\n Nome: " + user.getName() + "\n");
+
+        if (user != null) {
+            em.getTransaction().begin();
+            em.remove(user);
+            em.getTransaction().commit();
+        }
 
         em.close();
         emf.close();
