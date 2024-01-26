@@ -17,7 +17,7 @@ public class GetUsers {
 
         String jpql = "select u from User u";
         TypedQuery<User> query = em.createQuery(jpql, User.class);
-        query.setMaxResults(5);
+        query.setMaxResults(8);
 
         List<User> users = query.getResultList();
 

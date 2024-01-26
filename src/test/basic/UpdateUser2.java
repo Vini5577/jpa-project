@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 import model.basic.User;
 
-public class UpdateUser1 {
+public class UpdateUser2 {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
@@ -15,14 +15,13 @@ public class UpdateUser1 {
         em.getTransaction().begin();
 
         User user = em.find(User.class, 7L);
-        user.setName("Leonardo");
-        user.setEmail("leonardo@lanche.com.br");
+        user.setName("Leonardo Alterado de novo");
 
-        em.merge(user);
+        // em.merge(user);
 
         em.getTransaction().commit();
 
-        emf.close();
         em.close();
+        emf.close();
     }
 }
