@@ -12,7 +12,7 @@ public class GetUser {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
         EntityManager em = emf.createEntityManager();
 
-        User user = em.find(User.class, 8L);
+        User user = em.find(User.class, 7L);
         System.out.println("\n Nome: " + user.getName() + "\n");
 
         em.close();
