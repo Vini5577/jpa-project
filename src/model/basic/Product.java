@@ -25,9 +25,8 @@ public class Product {
 
     public Product() {
     }
-    
-    public Product(Long id, String name, Double preco) {
-        this.id = id;
+
+    public Product(String name, Double preco) {
         this.name = name;
         this.preco = preco;
     }
