@@ -49,6 +49,10 @@ public class DAO<E> {
         return this.openT().add(entity).closeT();
     }
 
+    public E getId(Object id) {
+        return em.find(classType, id);
+    }
+
     public List<E> getAll() {
         return this.getAll(10, 0);
     }
